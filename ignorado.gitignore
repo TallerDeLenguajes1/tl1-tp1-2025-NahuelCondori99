@@ -1,0 +1,4 @@
+ignorado.txt
+# Ejecutables.
+*.exe
+*.out
