@@ -92,11 +92,9 @@ void orden(int a, int b)
     {
         menor = b;
         mayor = a;
-    }else
-    {
-        menor = a;
-        mayor = b;
+        a = menor;
+        b = mayor;
     }
     
-    printf("%d - %d\n", menor, mayor);
+    printf("%d - %d\n", a, b);
 }
