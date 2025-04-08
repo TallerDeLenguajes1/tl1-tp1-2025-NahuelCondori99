@@ -2,6 +2,7 @@
 
 int cuadrado(int num);
 void cuadradoB(int num);
+void variable(int *num);
 
 int main()
 {
@@ -15,6 +16,8 @@ int main()
 
     printf("Funcion del apartado b):\n");
     cuadradoB(numero);
+
+    variable(&numero);
 
     return 0;
 }
@@ -47,4 +50,9 @@ void cuadradoB(int num)
     }
     
     printf("El cuadrado del numero %d es: %d\n", num, cuadradoNum);
+}
+
+void variable(int *num)
+{
+    printf("La direccion de la variable es: %p\nSu contenido es: %d", num, *num);
 }
