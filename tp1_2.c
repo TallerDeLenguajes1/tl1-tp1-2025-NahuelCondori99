@@ -4,6 +4,7 @@ int cuadrado(int num);
 void cuadradoB(int num);
 void variable(int *num);
 void invertir(int a, int b);
+void orden(int a, int b);
 
 int main()
 {
@@ -29,6 +30,8 @@ int main()
     scanf("%d",&valorB);
 
     invertir(valorA, valorB);
+
+    orden(valorA, valorB);
 
     return 0;
 }
@@ -79,4 +82,21 @@ void invertir(int a, int b)
     a = auxiliar;
 
     printf("***Valores invertidos***\nValor de A = %d\nValor de B = %d\n", a, b);
+}
+
+void orden(int a, int b)
+{
+    int menor = 0, mayor = 0;
+
+    if (a > b)
+    {
+        menor = b;
+        mayor = a;
+    }else
+    {
+        menor = a;
+        mayor = b;
+    }
+    
+    printf("%d - %d\n", menor, mayor);
 }
