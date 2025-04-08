@@ -3,6 +3,7 @@
 int cuadrado(int num);
 void cuadradoB(int num);
 void variable(int *num);
+void invertir(int a, int b);
 
 int main()
 {
@@ -18,6 +19,16 @@ int main()
     cuadradoB(numero);
 
     variable(&numero);
+
+    int valorA, valorB;
+
+    printf("Ingresar el valor de A:");
+    scanf("%d",&valorA);
+
+    printf("Ingresar el valor de B:");
+    scanf("%d",&valorB);
+
+    invertir(valorA, valorB);
 
     return 0;
 }
@@ -54,5 +65,18 @@ void cuadradoB(int num)
 
 void variable(int *num)
 {
-    printf("La direccion de la variable es: %p\nSu contenido es: %d", num, *num);
+    printf("La direccion de la variable es: %p\nSu contenido es: %d\n", num, *num);
+}
+
+void invertir(int a, int b)
+{
+    int auxiliar = 0;
+
+    printf("El valor de A = %d\nEl valor de B = %d\n", a, b);
+
+    auxiliar = b;
+    b = a;
+    a = auxiliar;
+
+    printf("***Valores invertidos***\nValor de A = %d\nValor de B = %d\n", a, b);
 }
